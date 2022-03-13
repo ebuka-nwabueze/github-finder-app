@@ -8,6 +8,8 @@ const githubReducer = (state, action) => {
             return {...state, loading: true}
         case "CLEAR_USERS":
             return {...state, userList: []}
+        case "GET_SINGLE_USER":
+            return {...state, user: action.payload, loading: false}
         default:
            return state;
     }
