@@ -44,7 +44,7 @@ export const GithubProvider = ({ children }) => {
         Authorization: `token ${GITHUB_API_TOKEN}`,
       },
     });
-    console.log(res)
+   
     if(res.status === 404){
       window.location('/notfound')
     } else {
@@ -53,6 +53,22 @@ export const GithubProvider = ({ children }) => {
         payload: res.data,
       });
     }
+  };
+
+  // Get user repos
+  const fetchUserRepos = async (login) => {
+    setLoading();
+
+    const res = await axios.get(`${GITHUB_URL}/users/${login}/repos`, {
+      headers: {
+        Authorization: `token ${GITHUB_API_TOKEN}`,
+      },
+    });
+
+    dispatch({
+      type: "GET_REPOS",
+      payload: res.data,
+    });
   };
 
   const setLoading = () => {
@@ -75,6 +91,7 @@ export const GithubProvider = ({ children }) => {
         fetchUser,
         clearUsers,
         fetchSingleUser,
+        fetchUserRepos,
       }}
     >
       {children}

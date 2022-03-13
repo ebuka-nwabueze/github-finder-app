@@ -5,13 +5,14 @@ import GithubContext from "../context/github/GithubContext";
 import Spinner from "../layout/Spinner";
 
 function User() {
-  const { user, fetchSingleUser, loading } = useContext(GithubContext);
+  const { user, fetchSingleUser, loading, fetchUserRepos, repos } = useContext(GithubContext);
   const params = useParams();
 
   useEffect(() => {
     fetchSingleUser(params.login);
+    fetchUserRepos(params.login);
   }, []);
-
+  console.log(repos)
   const {
     name,
     type,
