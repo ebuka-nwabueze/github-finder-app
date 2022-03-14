@@ -170,19 +170,3 @@ function User() {
 }
 
 export default User;
-
-{
-  /* <div className="grid  xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-8 md:gap-8">
-          <div className="custom-card-image mb-6 md:mb-0">
-            <div className="card image-full rounded-lg shadow-xl">
-              <figure>
-                <img src={avatar_url} alt="avatar" />
-              </figure>
-              <div className="card-body justify-end">
-                <h2 className="card-title mb-0">{name}</h2>
-                <p>{login}</p>
-              </div>
-            </div>
-          </div>
-        </div>  */
-}
