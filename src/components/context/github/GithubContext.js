@@ -1,4 +1,3 @@
-import axios from "axios";
 import { createContext, useReducer } from "react";
 import githubReducer from "../github/GithubReducer";
 

@@ -12,7 +12,6 @@ function User() {
   const params = useParams();
 
   useEffect(() => {
-    
     dispatch({ type: "SET_LOADING" });
     const fetchUserData = async () => {
      const userAndRepos = await fetchUserAndRepos(params.login)
@@ -20,7 +19,7 @@ function User() {
     }
 
     fetchUserData()
-  }, []);
+  }, [params.login,dispatch]);
   
   const {
     name,
