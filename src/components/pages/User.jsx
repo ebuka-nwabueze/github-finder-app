@@ -3,6 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import { FaCodepen, FaStore, FaUserFriends, FaUsers } from "react-icons/fa";
 import GithubContext from "../context/github/GithubContext";
 import Spinner from "../layout/Spinner";
+import RepoList from "../repos/RepoList";
+
 
 function User() {
   const { user, fetchSingleUser, loading, fetchUserRepos, repos } = useContext(GithubContext);
@@ -153,6 +155,8 @@ function User() {
             </div>
         </div>
         {/* end of the stats for following,follwoers, e.t.c */}
+
+        <RepoList repos={repos}/>
       </div>
       {/* end of w-full */}
     </>
