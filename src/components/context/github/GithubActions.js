@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useReducer } from "react";
 
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
 const GITHUB_API_TOKEN = process.env.REACT_APP_GITHUB_API_TOKEN;

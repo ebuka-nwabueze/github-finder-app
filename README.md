@@ -8,7 +8,13 @@ This application provides allows the search of github profiles and more informat
 
 -   ### `npm install`
 
-2) You can start the application with the following:
+2) Create a .env file with `GITHUB_URL` and "GITHUB_API_TOKEN"
+
+-   #### `GITHUB_URL` should contain the following url `https://api.github.com`
+    
+-   #### `GITHUB_TOKEN` should contain your Github API Key for making more request rather than the limited quota. To create your own key, [Click here](https://github.com/settings/tokens)
+
+3) You can start the application with the following:
 
 -   ### `npm run start`
 
