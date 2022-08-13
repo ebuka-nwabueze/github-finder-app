@@ -2,11 +2,10 @@ import { useState, useContext } from "react";
 import GithubContext from "../context/github/GithubContext";
 import AlertContext from "../context/alert/AlertContext";
 import { fetchUser } from "../context/github/GithubActions";
-import Spinner from "../layout/Spinner";
 
 function UserSearch() {
   const [text, setText] = useState("");
-  const { userList, dispatch, loading } = useContext(GithubContext);
+  const { userList, dispatch,  } = useContext(GithubContext);
   const { setAlert } = useContext(AlertContext);
 
   const handleSubmit = async (e) => {
@@ -48,11 +47,11 @@ function UserSearch() {
         </form>
       </div>
       <div>
-        {/* {userList.length > 0 && (
+        {userList.length > 0 && (
           <button onClick={() => dispatch({type: "CLEAR_USERS"})} className="btn btn-ghost btn-lg">
             Clear
           </button>
-        )} */}
+        )}
       </div>
     </div>
   );

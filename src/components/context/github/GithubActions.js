@@ -9,7 +9,6 @@ const headers =  { Authorization: `token ${GITHUB_API_TOKEN}` }
 
 // fetch all users using search parameter
 export const fetchUser = async (text) => {
-  const params = new URLSearchParams({ q: text });
     try {
       const res = await axios.get(`https://api.github.com/search/users?q=${text}`,headers);
       return res.data.items;
