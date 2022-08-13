@@ -1,7 +1,7 @@
 import { createContext, useReducer } from "react";
 import githubReducer from "../github/GithubReducer";
 
-const GithubContext = createContext();
+const GithubContext = createContext(); 
 
 export const GithubProvider = ({ children }) => {
   const initialState = {
